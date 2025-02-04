@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperVision</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+       <!-- Video background -->
+       <video class="video-background" autoplay loop muted playsinline>
+        <source src="data/Free motion background Video - Particles Animation 4K Loop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="logo-container">
+        <img class="logo" src="data/logoboi.png">
+      </div>
+    <div class="header">SuperVision</div>
+    <div class="contact" id="contactButton">OTA YHTEYTTÄ</div> 
+
+    <div class="content">
+        <h1>Muuta tilasi<br>virtuaaliseksi</h1>
+        <p class="subtext">3D mallinnokset tiloistasi</p>
+    </div>
+
+    <div class="services-section" id="services">
+        <br><br><br><h2>Miten voimme auttaa?</h2><br><br><br>
+        <div class="service-boxes" >
+            <div class="service-box" onclick="scrollToSection('matterport-section')">
+                <img src="data/matterport logo.png" alt="Matterport Logo">
+                <div class="label">Matterport</div>
+            </div>
+            <div class="service-box" onclick="scrollToSection('koola-section')">
+                <img src="data/kuula.logo.png" alt="Koola Logo"> 
+                <div class="label">Koola</div>
+            </div>
+            <div class="service-box" onclick="scrollToSection('auto-section')">
+                <img src="data/auto.done.png" alt="Koola Logo">    
+                <div class="label">Auto</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Section for Matterport 3D Virtual Tour -->
+    <div class="matterport-section" id="matterport-section">
+        <h2>Matterport 3D Virtual Tour</h2>
+        <p class="matterport-description">Matterport on markkinajohtaja 3D virtuaali kierrosten markkinoilla. Jos etsit asuntosi esittelyyn helppoa vaihtoehtoa virtuaalisesti netissä, tai haluat houkutella asiakkaita kiinnostumaan sinun tiloista, meillä on sinulle ratkaisu.
+
+        </p>
+        <button class="read-more-button">Lue Lisää</button>
+        <div class="read-more-content">
+            <p>
+                Matterport virtuaalikierrokset ovat uusinta teknologiaa, joka luo upean kolmiulotteisen ”nukketalo” mallinnoksen sinun tiloista. Sen lisäksi voit tupla klikkaamalla astua asuntoon sisään ja virtuaalisesti ”kävellä” sen sisällä! (katso esimerkki alta)<br><br>
+
+                Matterport virtuaali kierrokseen voit tilata meidän kautta ottamalla meihin yhteyttä alla olevan ”ota yhteyttä” kentän kautta! Kun olemme päässeet kuvaamaan tilasi, ja tehnyt kaiken muun valmiiksi, saat linkin jota voit käyttää kuin itse haluat!<br><br>
+
+                Ole rohkea ja ota edellä käviän askel kohti tulevaisuuden liiketoimintaa!<br><br>
+
+                Hinta palvelusta tulee sopia tarkemmin tarjouksessa, mutta hinta koostuun näistä tekijöistä; palvelu maksu, tilojen koko, netti housting (kuukausittainen maksu) arvio hinnasta; 160e-320e + 18e/kk 
+            </p>
+           
+        </div><br>
+        <div class="big-box"><div class="matterport-iframe-container">
+            <iframe class="matterport-iframe" src="https://my.matterport.com/show?play=1&lang=en-US&m=Qz9GWH6Du4J&sm=2&sr=-2.15,-.93,-2.26&sp=-8.48,10.59,.48" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+          </div></div>
+    </div>
+
+    <!-- New Section for Koola 360 Virtual Presentation -->
+    <div class="koola-section" id="koola-section">
+        <h2>Koola 360 virtuaali esittely</h2>
+        <p class="koola-description">Kuula on 360 virtuaali kierrosten markkina johtaja. 360 virtuaalikierros herättää asiakkaan huomion jo koti sohvalta, sekä vastaa jo moneen asiakkaan kysymykseen, joka vähentää omaa panostusta tilojen esittelyyn!</p>
+        <button class="read-more-button">Lue Lisää</button>
+            <div class="read-more-content">
+                <p>
+                    360 kuvilla pystyy myös hahmottamaan jokaisen yksityiskohdan hieman paremmin kuin 3D kierroksessa. 360 kierroksessa ei ole kolmiulotteisia animaatioita tai ”nukketaloja”, mutta on esimerkiksi mahdollisuus lisätä drone kuvan kertomaan ympäristöstä. <br><br>
+
+                    Teemme myös google mapsiin kierroksia. Näin voit vaikka esitellä sinun upeita vaivalla ja rahalla tehtyjä tiloja, ja houkutella asiakkaita vaikka omaan viihtyisään ravintolaan ja nostaa googlen hakukoneessa omaa sijaa.<br><br>
+
+                    360 kierroksista voi olla mittaamattomiin asti hyötyä, vain luovuus on rajana, Joten ota yhteyttä ja tehdään sinun tilasi virtuaaliseksi! Kun kierros on valmis lähetämme sinulle linkin jota voit käyttää kuten haluat<br><br>
+
+                    Tarkemmat hinnat sovitaan tarjouksessa, mutta hinnat koostuvat näistä tekijöistä: palvelumaksu, tilojen koko, drone kuva, netti housting maksu (kuukausittainen maksu) hinta arvio: 180-400e + 10e/kk
+                </p>
+                
+            </div><br>
+        <div class="big-box-koola"> <div class="koola-iframe-container">
+            <iframe class="koola-iframe" src="https://kuula.co/share/collection/7cM5H?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" frameborder="0" allowfullscreen allowvr></iframe>
+          </div></div>
+    </div>
+
+    <!-- New Section for 360 Auto -->
+    <div class="auto-section" id="auto-section">
+        <h2>360 Auto</h2>
+        <p class="auto-description">Esittele Autosi 360 kuvalla, ja rakenna luotettavuutta asiakkaisiisi!
+
+        </p>
+        <button class="read-more-button">Lue Lisää</button>
+            <div class="read-more-content">
+                <p>
+                    360 kuvaus autojen jälleen myynnissä on kasvanut suureen suosioon auto markkinoilla. 360 kuva autosta helpottaa ostajan päätöksentekoa jo kotisohvalta saakka. Asiakas näkee auton juuri kuin se on, joka kasvattaa luotettavuutta asiakkaiden silmissä.<br><br>
+
+                    Ota yhteyttä ja ota askel kohti parempaa myynti menestystä. Kun kuvaukset ovat valmiit lähetämme teille linkin jota voitte käyttää juuri kuten haluatte! <br><br>
+
+                    Tarkempi hinta sovitaan tarjouksessa, mutta näistä tekijöistä hinta koostuu: palvelumaksu, kuvattavien autojen määrä. Hinta arvio 20-40e per auto (enemmän kuvattavaa halvempi kappale hinta)
+                </p>
+                
+            </div><br>
+        <div class="big-box-auto"><div class="auto-iframe-container">
+            <iframe class="auto-iframe" src="https://honda-accord-2006.netlify.app/" frameborder="0"></iframe>
+          </div></div>
+    <br><br></div>
+<br><br><br>
+    <!-- New Section for Meistä -->
+    <div class="about-section">
+        <div class="circle"><img src="data/logoboi.png" alt="Logo"> 
+        </div><br>
+        <span class="about-text">Meistä</span>
+    </div>
+
+    <!-- New Section for Three Boxes -->
+    <div class="boxes-section">
+        <div class="box">
+            <p>
+                Olemme kaksi nuorta yrittäjää, alkuperäisin Porvoosta. Yrityksen tavoite on kasvaa suureksi virtuaali kuvaus yritykseksi, ja mullistaa suomalaisten yritysten ja yksilö yrittäjien markkinointia.
+                <br><br>
+                Huomasimme ongelman kun olimme menossa syömään ja halusimme valita ravintolan jossa olisi hyvää ruokaa ja myös ympäristö olisi viihtyisä. Aloimme miettimään "miksi ravintoloilla ei ole jotain järkevää tapaa nähdä sisätilat jo etänä niin ravintolan valinta olisi helpompaa." Aloimme tutkia asiaa ja löysimme ratkaisun, ja SuperVision sai alun. Nyt vuosi myöhemmin olemme valmiina aloittamaan liiketoimintamme! Ole mukana rakentamassa meidän tarinaamme!
+            </p>
+        </div>
+        
+    </div>
+<br><br>
+    <div class="contact-section">
+        <h2>OTA YHTEYTTÄ</h2>
+        <form action="https://formsubmit.co/supervision.palvelut@gmail.com" method="POST"> <!-- Replace YOUR_SERVER_ENDPOINT with your actual server-side endpoint -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Puhelin numero:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Viesti:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">lähetä</button>
+        </form>
+    </div> <br><br><br>
+    <footer>
+        <div class="footer-container"><br><br><br><br><br><br><br>
+          <p>© SuperVision 2025</p>
+
+        </div>
+      </footer>
+
+<script>
+
+ function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 && 
+      rect.top <= window.innerHeight
+    );
+  }
+  
+  function handleScroll() {
+    const servicesSection = document.getElementById('services');
+    const serviceBoxes = document.querySelectorAll('.service-box');
+  
+    if (isElementInViewport(servicesSection)) {
+      servicesSection.classList.add('visible'); 
+  
+      serviceBoxes.forEach((box, index) => {
+        setTimeout(() => {
+          box.classList.add('visible'); 
+        }, index * 200); 
+      });
+    }
+  
+    const sections = document.querySelectorAll('.matterport-section, .koola-section, .auto-section, .about-section, .contact-section');
+  
+    sections.forEach(section => {
+      if (isElementInViewport(section)) {
+        section.classList.add('visible');
+      } 
+    });
+  }
+  
+  window.addEventListener('scroll', handleScroll); 
+  
+  const contactButton = document.getElementById('contactButton');
+  const contactSection = document.querySelector('.contact-section'); 
+  
+  contactButton.addEventListener('click', () => {
+    contactSection.scrollIntoView({ behavior: 'smooth' }); 
+  });
+  
+  const readMoreButtons = document.querySelectorAll('.read-more-button');
+  
+          readMoreButtons.forEach(button => {
+              const readMoreContent = button.nextElementSibling;
+  
+              button.addEventListener('click', () => {
+                  readMoreContent.style.display = readMoreContent.style.display === 'block' ? 'none' : 'block';
+                  button.textContent = button.textContent === 'Lue Lisää' ? 'Piilota' : 'Lue Lisää';
+              });
+          });
+  
+          // Delay the application of the 'visible' class to allow the JavaScript to run first.
+          window.addEventListener('DOMContentLoaded', () => {  // Wait for the DOM to be fully loaded
+  
+              function handleScroll() {
+                  const animatedSections = document.querySelectorAll('.matterport-section, .koola-section, .auto-section, .about-section, .contact-section, .services-section'); //Include all sections
+  
+                  animatedSections.forEach(section => {
+                      if (isElementInViewport(section)) {
+                          section.classList.add('visible');
+  
+                          if (section.classList.contains('services-section')) {
+                              const serviceBoxes = section.querySelectorAll('.service-box');
+                              serviceBoxes.forEach((box, index) => {
+                                  setTimeout(() => {
+                                      box.classList.add('visible');
+                                  }, index * 200);
+                              });
+                          }
+  
+                      }
+                  });
+              }
+              window.addEventListener('scroll', handleScroll);
+              handleScroll(); //Call on load to show elements that are in viewport
+          });
+          </script>
+</body>
+</html>
