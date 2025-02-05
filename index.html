@@ -134,6 +134,12 @@
     <div class="contact-section">
         <h2>OTA YHTEYTTÄ</h2>
         <form action="https://formsubmit.co/14e5b8a37a0eeaf3dd14a43fc3e997d5" method="POST"> <!-- Replace YOUR_SERVER_ENDPOINT with your actual server-side endpoint -->
+            <!--honeypot-->
+            <input type="text" name="_honey" style="display: none;">
+
+            <!-- disable captcha -->
+             <input type="hidden" name="_captcha" value="false" >
+
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
