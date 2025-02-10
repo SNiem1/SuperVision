@@ -27,7 +27,7 @@
     </div>
 
     <div class="services-section" id="services">
-        <br><br><br><h2>Miten voimme auttaa?</h2><br><br><br>
+        <br><br><br><h2>Miten voimme auttaa?</h2>
         <div class="service-boxes" >
             <div class="service-box" onclick="scrollToSection('matterport-section')">
                 <img src="data/matterport logo.png" alt="Matterport Logo">
@@ -63,7 +63,7 @@
             </p>
            
         </div><br>
-        <div class="big-box"><div class="matterport-iframe-container">
+        <div class="big-box"><div class="iframe-container">
             <iframe class="matterport-iframe" src="https://my.matterport.com/show?play=1&lang=en-US&m=Qz9GWH6Du4J&sm=2&sr=-2.15,-.93,-2.26&sp=-8.48,10.59,.48" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
           </div></div>
     </div>
@@ -71,7 +71,7 @@
     <!-- New Section for Koola 360 Virtual Presentation -->
     <div class="koola-section" id="koola-section">
         <h2>Koola 360 virtuaali esittely</h2>
-        <p class="koola-description">Kuula on 360 virtuaali kierrosten markkina johtaja. 360 virtuaalikierros herättää asiakkaan huomion jo koti sohvalta, sekä vastaa jo moneen asiakkaan kysymykseen, joka vähentää omaa panostusta tilojen esittelyyn!</p>
+        <p class="koola-description">Koola on 360 virtuaali kierrosten markkina johtaja. 360 virtuaalikierros herättää asiakkaan huomion jo koti sohvalta, sekä vastaa jo moneen asiakkaan kysymykseen, joka vähentää omaa panostusta tilojen esittelyyn!</p>
         <button class="read-more-button">Lue Lisää</button>
             <div class="read-more-content">
                 <p>
@@ -85,7 +85,7 @@
                 </p>
                 
             </div><br>
-        <div class="big-box-koola"> <div class="koola-iframe-container">
+        <div class="big-box"> <div class="iframe-container">
             <iframe class="koola-iframe" src="https://kuula.co/share/collection/7cM5H?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" frameborder="0" allowfullscreen allowvr></iframe>
           </div></div>
     </div>
@@ -107,7 +107,7 @@
                 </p>
                 
             </div><br>
-        <div class="big-box-auto"><div class="auto-iframe-container">
+        <div class="big-box"><div class="iframe-container">
             <iframe class="auto-iframe" src="https://honda-accord-2006.netlify.app/" frameborder="0"></iframe>
           </div></div>
     <br><br></div>
@@ -166,89 +166,49 @@
 
 <script>
 
- function scrollToSection(sectionId) {
+function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
-  
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 && 
-      rect.top <= window.innerHeight
-    );
-  }
-  
-  function handleScroll() {
-    const servicesSection = document.getElementById('services');
-    const serviceBoxes = document.querySelectorAll('.service-box');
-  
-    if (isElementInViewport(servicesSection)) {
-      servicesSection.classList.add('visible'); 
-  
-      serviceBoxes.forEach((box, index) => {
-        setTimeout(() => {
-          box.classList.add('visible'); 
-        }, index * 200); 
-      });
-    }
-  
-    const sections = document.querySelectorAll('.matterport-section, .koola-section, .auto-section, .about-section, .contact-section');
-  
-    sections.forEach(section => {
-      if (isElementInViewport(section)) {
-        section.classList.add('visible');
-      } 
+}
+
+const contactButton = document.getElementById('contactButton');
+const contactSection = document.querySelector('.contact-section');
+
+contactButton.addEventListener('click', () => {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+const readMoreButtons = document.querySelectorAll('.read-more-button');
+readMoreButtons.forEach(button => {
+    const readMoreContent = button.nextElementSibling;
+    button.addEventListener('click', () => {
+        readMoreContent.style.display = readMoreContent.style.display === 'block' ? 'none' : 'block';
+        button.textContent = button.textContent === 'Lue Lisää' ? 'Piilota' : 'Lue Lisää';
     });
-  }
-  
-  window.addEventListener('scroll', handleScroll); 
-  
-  const contactButton = document.getElementById('contactButton');
-  const contactSection = document.querySelector('.contact-section'); 
-  
-  contactButton.addEventListener('click', () => {
-    contactSection.scrollIntoView({ behavior: 'smooth' }); 
-  });
-  
-  const readMoreButtons = document.querySelectorAll('.read-more-button');
-  
-          readMoreButtons.forEach(button => {
-              const readMoreContent = button.nextElementSibling;
-  
-              button.addEventListener('click', () => {
-                  readMoreContent.style.display = readMoreContent.style.display === 'block' ? 'none' : 'block';
-                  button.textContent = button.textContent === 'Lue Lisää' ? 'Piilota' : 'Lue Lisää';
-              });
-          });
-  
-          // Delay the application of the 'visible' class to allow the JavaScript to run first.
-          window.addEventListener('DOMContentLoaded', () => {  // Wait for the DOM to be fully loaded
-  
-              function handleScroll() {
-                  const animatedSections = document.querySelectorAll('.matterport-section, .koola-section, .auto-section, .about-section, .contact-section, .services-section'); //Include all sections
-  
-                  animatedSections.forEach(section => {
-                      if (isElementInViewport(section)) {
-                          section.classList.add('visible');
-  
-                          if (section.classList.contains('services-section')) {
-                              const serviceBoxes = section.querySelectorAll('.service-box');
-                              serviceBoxes.forEach((box, index) => {
-                                  setTimeout(() => {
-                                      box.classList.add('visible');
-                                  }, index * 200);
-                              });
-                          }
-  
-                      }
-                  });
-              }
-              window.addEventListener('scroll', handleScroll);
-              handleScroll(); //Call on load to show elements that are in viewport
-          });
+});
+
+// Use IntersectionObserver for scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('services-section')) {
+                const serviceBoxes = entry.target.querySelectorAll('.service-box');
+                serviceBoxes.forEach((box, index) => {
+                    setTimeout(() => {
+                        box.classList.add('visible');
+                    }, index * 200);
+                });
+            }
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.matterport-section, .koola-section, .auto-section, .about-section, .contact-section, .services-section').forEach(section => {
+    observer.observe(section);
+});
           </script>
 </body>
 </html>
