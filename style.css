@@ -10,6 +10,11 @@ body {
     overflow-x: hidden; 
     background: rgba(0, 0, 0, 0.5); 
 }
+:root {
+    --primary-color: #007BFF;
+    --section-background: rgb(29, 28, 28);
+    --text-color: white; /* Define text color variable */
+}
 /* Video background */
 .video-background {
     position: fixed;
